@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(7, 1fr) 2fr;
+    height: 100vh;
+}
