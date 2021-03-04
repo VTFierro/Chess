@@ -12,6 +12,8 @@ body {
 }
 :root{
     --main-purple: #402B4F;
+    --mid-purple: #504C52;
+    --cold-purple: #767279;
     --light-purple: #AFAAB3;
 }
 .main-grid {
@@ -20,12 +22,11 @@ body {
     height: 100vh;
     width: 100%;
 }
-.main-grid__item {
-    border: solid 2px red;
-}
 #title {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
+    margin-right: 10px;
+    border-right: solid 1px var(--cold-purple);
     display: flex;
     justify-content:flex-end;
     align-items: center;
@@ -34,8 +35,10 @@ body {
 #sub-title {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
+    margin-right: 10px;
     font-size: 3rem;
     font-weight: 900;
+    border-right: solid 1px var(--cold-purple);
     color:  var(--main-purple);
     display: flex;
     justify-content: flex-end;
@@ -47,6 +50,16 @@ body {
 #vertical-banner {
     grid-column: 7 / 8;
     grid-row: 1 / 6;
+    padding: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    color: white;
+    background-color: #101010;
+    background-image: url(/assets/images/king@2x.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+
 }
 #news {
     grid-column: 2 / 7;
@@ -67,7 +80,7 @@ body {
     grid-row: 3 / 5;
     font-size: 10rem;
     font-weight: bold;
-    margin: 0px 5px 5px;
+    margin: 0px 5px 15px;
     color: var(--light-purple);
     background-image: url(/assets/images/tactics.jpg);
 
@@ -78,6 +91,8 @@ body {
 #academy {
     grid-column: 3 / 5;
     grid-row: 3 / 4;
+    margin-bottom: 5px;
+    margin-right: 5px;
     font-size: 5rem;
     font-weight: bold;
     color: var(--main-purple);
@@ -88,6 +103,8 @@ body {
 #strategy {
     grid-column: 5 / 7;
     grid-row: 3 / 4;
+    margin-bottom: 5px;
+    margin-right: 5px;
     font-size: 5rem;
     font-weight: bold;
     color: var(--light-purple);
@@ -98,11 +115,68 @@ body {
 .text {
     grid-column: 3 / 7;
     grid-row: 4 / 5;
+    padding: 5%;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--main-purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    width: 230px;
+    border-right: solid 1px var(--cold-purple);
+    border-top: solid 1px var(--cold-purple);
 }
 .navbar {
     grid-column: 2 / 7;
     grid-row: 5 / 6;
-    border: solid 2px red;
+    margin-left: 0px;
+    border-top: solid 1px var(--mid-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    list-style: none;
+}
+.navbar__button {
+    display: flex;
+    width: 240px;
+    height: 90px;
+}
+.navbar__button--number {
+    background-color: var(--mid-purple);
+    height: 90px;
+    width: 90px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__button--text {
+    background-color: var(--cold-purple);
+    height: 90px;
+    width: 150px;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar__button--text a {
+    text-decoration: none;
+    color: white;
 }
 .title p {
     font-size: 15rem;
@@ -111,7 +185,7 @@ body {
     transform: rotate(180deg);
     color: var(--main-purple);
     position: absolute;
-    left: 70px;
+    left: 60px;
     bottom:-120px;
 }
 #news, #tactic, #strategy, #academy {
